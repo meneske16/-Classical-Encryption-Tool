@@ -1,0 +1,34 @@
+# Example manual tests (from assignment)
+
+1) Additive:
+Input: Aleena, key=9, encrypt -> expect junnwj
+
+2) Multiplicative:
+Input: minahil, key=9, encrypt -> expect eunaluv
+
+3) Affine:
+Input: Aleena, a=9, b=9, encrypt -> expect jettwj
+
+4) Monoalpha:
+Input: minahil, key=qwertyuiopasdfghjklzxcvbnm, encrypt -> expect dofqios
+
+5) Autokey:
+Input: Aleena, key=sehar, encrypt -> expect spleea
+
+6) Vigenere:
+Input: minahil, key=nadeem, encrypt -> expect ziqeluy
+
+7) Playfair:
+Input: Aleena, key=sehar, encrypt -> expect hmhwrk
+
+8) Rail-Fence:
+Input: Minahil, depth=2, encrypt -> expect mnhliai
+
+9) Keyed Columnar:
+Input: Aleena, key=sehar, encrypt -> expect elenaa
+
+10) Combination:
+Input: Aleena, key=sehar, encrypt -> expect ealnae
+
+11) Double Transposition:
+Input: HELLO, keys=KEY1,KEY2, encrypt -> expect LOHEL
