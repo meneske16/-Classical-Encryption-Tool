@@ -1,97 +1,136 @@
-🔐 Information Security – Classical Encryption Tool
+# 🔐 Classical Encryption Toolkit – Python
 
-A Python-based multi-cipher encryption and decryption toolkit
+![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python\&logoColor=white) ![License](https://img.shields.io/badge/License-MIT-green) ![No Dependencies](https://img.shields.io/badge/Dependencies-None-lightgrey)
 
-This project is an implementation of a complete classical cryptography encryption tool, developed as part of an Information Security assignment. It includes 11 traditional ciphers, each implemented from scratch using the Python standard library only — no external dependencies.
+A **Python-based multi-cipher encryption and decryption toolkit** for classical cryptography, built entirely from scratch.
 
-The tool provides a menu-driven CLI where users can choose a cipher, enter plaintext/ciphertext, provide necessary keys, and obtain results instantly.
-
-
----
-
-✨ Features
-
-✔ Additive (Caesar) Cipher
-✔ Multiplicative Cipher
-✔ Affine Cipher
-✔ Monoalphabetic Substitution Cipher
-✔ Autokey Cipher
-✔ Vigenere Cipher
-✔ Playfair Cipher (5×5, J→I mapping)
-✔ Rail-Fence Transposition (Keyless)
-✔ Keyed Columnar Transposition
-✔ Combination Transposition (Keyed + Rail-Fence)
-✔ Double Transposition (Two different keys)
-
-All algorithms support:
-
-Case preservation
-
-Non-alphabet handling
-
-Custom keys
-
-Both encryption & decryption where applicable
-
-
+> **No external dependencies** — fully implemented using Python’s standard library.
 
 ---
 
-🛠 How It Works
+## ✨ Features
 
-Run the script and select the cipher from a numeric menu. Depending on the cipher, you’ll be asked for:
+Includes **11 classical ciphers**, all supporting encryption & decryption with:
 
-plaintext/ciphertext
+* ✅ Case preservation
+* ✅ Non-alphabet character handling
+* ✅ Custom keys
 
-encryption/decryption mode
-
-keys (numeric or word-based)
-The tool then outputs the processed text immediately.
-
-
-
----
-
-📄 Files Included
-
-encryption_tool.py — Main CLI program
-
-README.md — Full project overview & usage
-
-.gitignore — Standard Python ignores
-
-LICENSE — MIT License
-
-requirements.txt — No external libraries needed
-
-
+| Cipher                             | Type                                     |
+| ---------------------------------- | ---------------------------------------- |
+| Additive (Caesar) Cipher           | Shift-based                              |
+| Multiplicative Cipher              | Modular arithmetic                       |
+| Affine Cipher                      | Combination of additive & multiplicative |
+| Monoalphabetic Substitution Cipher | Custom mapping                           |
+| Autokey Cipher                     | Key-stream based                         |
+| Vigenère Cipher                    | Repeating key stream                     |
+| Playfair Cipher                    | 5×5 matrix, J→I mapping                  |
+| Rail-Fence Transposition           | Keyless zigzag pattern                   |
+| Keyed Columnar Transposition       | Columnar permutation                     |
+| Combination Transposition          | Keyed + Rail-Fence                       |
+| Double Transposition               | Two separate keys                        |
 
 ---
 
-📌 Example Outputs (from assignment)
+## 🛠 How It Works
 
-The repository includes example encryptions & decryptions taken directly from the submitted assignment PDF. These help verify correctness.
+Run the script and interact via **menu-driven CLI**:
 
+```bash
+python encryption_tool.py
+```
+
+**Example session:**
+
+```text
+🔹 Select Cipher:
+1. Additive (Caesar)
+2. Multiplicative
+3. Affine
+...
+Enter your choice: 1
+
+Enter plaintext: HELLO WORLD
+Enter key (numeric): 3
+Encrypted text: KHOOR ZRUOG
+```
+
+**Decryption is equally simple:**
+
+```text
+Enter ciphertext: KHOOR ZRUOG
+Enter key (numeric): 3
+Decrypted text: HELLO WORLD
+```
+
+> The interface automatically handles upper/lowercase, spaces, and punctuation.
 
 ---
 
-🎯 Purpose of This Project
+## 📄 Project Files
 
-This tool demonstrates understanding of:
+| File                 | Description                          |
+| -------------------- | ------------------------------------ |
+| `encryption_tool.py` | Main CLI program with all 11 ciphers |
+| `README.md`          | Full project overview & usage        |
+| `.gitignore`         | Standard Python ignores              |
+| `LICENSE`            | MIT License                          |
+| `requirements.txt`   | No external libraries needed         |
 
-Classical encryption algorithms
+---
 
-Python string manipulation
+## 📌 Example Outputs
 
-Modular arithmetic
+All example encryptions & decryptions are included from the submitted assignment PDF.
 
-Key-stream generation
+> Use these examples to verify correctness of each cipher.
 
-Matrix-based transpositions
+---
 
-Secure coding of historical ciphers
+## 🎯 Purpose
 
+This project demonstrates:
 
-It is meant for educational use, cryptography learning, and information security coursework.
+* ✅ Mastery of **classical encryption algorithms**
+* ✅ Python **string manipulation & modular arithmetic**
+* ✅ **Key-stream generation** and **matrix-based transpositions**
+* ✅ **Secure coding of historical ciphers** in a modular CLI tool
+
+---
+
+## 🚀 Getting Started
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/<your-username>/classical-encryption-tool.git
+cd classical-encryption-tool
+```
+
+2. Run the tool:
+
+```bash
+python encryption_tool.py
+```
+
+3. Follow the prompts to encrypt/decrypt using **any of the 11 ciphers**.
+
+---
+
+## 💡 Tips
+
+* For Playfair cipher, **J is replaced by I** automatically.
+* Rail-Fence transposition requires **no key**, while columnar and double transpositions do.
+* Supports **custom keys**, including numeric and word-based keys.
+
+---
+
+## 🏆 Contribution & License
+
+This project is licensed under the **MIT License**. Contributions are welcome — feel free to fork and experiment.
+
+![MIT](https://img.shields.io/badge/License-MIT-green)
+
+---
 
 
