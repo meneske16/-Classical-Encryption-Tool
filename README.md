@@ -1,131 +1,97 @@
-Development of Encryption Tool
+🔐 Information Security – Classical Encryption Tool
 
-This repository contains a Python-based encryption tool implementing several classical ciphers:
-- Additive (Caesar)
-- Multiplicative
-- Affine
-- Monoalphabetic substitution
-- Autokey
-- Vigenere
-- Playfair
-- Rail-Fence (keyless transposition)
-- Keyed Columnar transposition
-- Combination (keyed columnar + rail-fence)
-- Double transposition (two keyed columnar passes)
+A Python-based multi-cipher encryption and decryption toolkit
 
-This project implementation and test vectors are derived from the assignment PDF submitted for the CS-375 Information Security course. (Original PDF used as source included in the submission.) 1
+This project is an implementation of a complete classical cryptography encryption tool, developed as part of an Information Security assignment. It includes 11 traditional ciphers, each implemented from scratch using the Python standard library only — no external dependencies.
 
-## Files
-- encryption_tool.py — main script (CLI)
-- README.md — this file
-- LICENSE — MIT
-- .gitignore — Python ignores
-- requirements.txt — (none required; runs with standard library)
+The tool provides a menu-driven CLI where users can choose a cipher, enter plaintext/ciphertext, provide necessary keys, and obtain results instantly.
 
-## Usage
-Make the script executable and run:
-```bash
-python3 encryption_tool.py
 
-Follow the interactive menu to choose cipher, provide keys and text, and get results.
+---
 
-Quick tests (expected outputs from assignment)
+✨ Features
 
-(These examples match the expected outputs recorded in the assignment PDF.)
+✔ Additive (Caesar) Cipher
+✔ Multiplicative Cipher
+✔ Affine Cipher
+✔ Monoalphabetic Substitution Cipher
+✔ Autokey Cipher
+✔ Vigenere Cipher
+✔ Playfair Cipher (5×5, J→I mapping)
+✔ Rail-Fence Transposition (Keyless)
+✔ Keyed Columnar Transposition
+✔ Combination Transposition (Keyed + Rail-Fence)
+✔ Double Transposition (Two different keys)
 
-1. Additive (Caesar)
+All algorithms support:
+
+Case preservation
+
+Non-alphabet handling
+
+Custom keys
+
+Both encryption & decryption where applicable
 
 
 
-Plaintext: Aleena
-Key: 9
-Encrypt -> junnwj
-Decrypt -> aleena
+---
 
-2. Multiplicative
+🛠 How It Works
 
+Run the script and select the cipher from a numeric menu. Depending on the cipher, you’ll be asked for:
 
+plaintext/ciphertext
 
-Plaintext: minahil
-Key: 9
-Encrypt -> eunaluv
-Decrypt -> minahil
+encryption/decryption mode
 
-3. Affine (a=9, b=9)
+keys (numeric or word-based)
+The tool then outputs the processed text immediately.
 
 
 
-Plaintext: Aleena
-Encrypt -> jettwj
-Decrypt -> aleena
+---
 
-4. Monoalphabetic substitution (key=qwertyuiopasdfghjklzxcvbnm)
+📄 Files Included
 
+encryption_tool.py — Main CLI program
 
+README.md — Full project overview & usage
 
-Plaintext: minahil
-Encrypt -> dofqios
-Decrypt -> minahil
+.gitignore — Standard Python ignores
 
-5. Autokey
+LICENSE — MIT License
 
-
-
-Plaintext: Aleena
-Key: sehar
-Encrypt -> spleea
-Decrypt -> aleena
-
-6. Vigenere
+requirements.txt — No external libraries needed
 
 
 
-Plaintext: minahil
-Key: nadeem
-Encrypt -> ziqeluy
-Decrypt -> minahil
+---
 
-7. Playfair
+📌 Example Outputs (from assignment)
 
+The repository includes example encryptions & decryptions taken directly from the submitted assignment PDF. These help verify correctness.
 
 
-Plaintext: Aleena
-Key: sehar
-Encrypt -> hmhwrk
-Decrypt -> alexen (assignment's expected "alexen")
+---
 
-8. Rail-Fence (depth=2)
+🎯 Purpose of This Project
 
+This tool demonstrates understanding of:
 
+Classical encryption algorithms
 
-Plaintext: Minahil
-Encrypt -> mnhliai
-Decrypt -> minahil
+Python string manipulation
 
-9. Keyed Columnar (key=sehar)
+Modular arithmetic
 
+Key-stream generation
 
+Matrix-based transpositions
 
-Plaintext: Aleena
-Encrypt -> elenaa
-Decrypt -> Aleena
-
-10. Combination (keyed + rail)
+Secure coding of historical ciphers
 
 
-
-Plaintext: Aleena
-Key: sehar
-Encrypt -> ealnae
-Decrypt -> aleena
-
-11. Double Transposition (example in assignment)
+It is meant for educational use, cryptography learning, and information security coursework.
 
 
-
-Plaintext: HELLO
-Keys: KEY1, KEY2
-Encrypt -> LOHEL
-Decrypt -> HELLO
-
-> Note: Playfair and transposition variants depend on implementation details (J/I handling, filler letter, handling of non-alpha). The code follows the assignment's approach.
